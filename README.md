@@ -19,9 +19,11 @@ Node.js + Express + MongoDB backend for managing charging stations with JWT auth
 - Store charging station details including:
     • Name, Location (Latitude & Longitude), Status (Active/Inactive), PowerOutput (kW) ConnectorType.
 
+##
+
 - Frontend
 
-Vue.js + OpenstreetMap
+Vue.js + OpenstreetMap + Tailwind CSS
 
 ## Features
 
@@ -33,6 +35,8 @@ Vue.js + OpenstreetMap
 - Develop a Map View
 - Display all onboarded chargers on a map using OpenStreetMap
 - Clicking a marker should show the charger details
+- dashboard UI design for both mobile and desktop
+- implement lazy loading for components
 
 
 

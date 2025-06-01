@@ -76,7 +76,8 @@ export default {
   methods: {
     async login() {
       try {
-        const res = await axios.post('http://localhost:5000/api/auth/login', {
+       const backendUrl = import.meta.env.VITE_BACKEND_URL
+        const res = await axios.post(`${backendUrl}/api/auth/login`, {
           email: this.email,
           password: this.password
         })

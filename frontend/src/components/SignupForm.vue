@@ -97,7 +97,8 @@ export default {
   methods: {
     async signup() {
       try {
-        const res = await axios.post('http://localhost:5000/api/auth/register', {
+        const backendUrl = import.meta.env.VITE_BACKEND_URL
+        const res = await axios.post(`${backendUrl}/api/auth/register`, {
           name: this.name,
           email: this.email,
           password: this.password

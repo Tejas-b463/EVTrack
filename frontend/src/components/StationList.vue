@@ -224,8 +224,8 @@ export default {
           console.warn('No token found in localStorage')
           return
         }
-
-        const res = await axios.get('http://localhost:5000/api/chargers', {
+        const backendUrl = import.meta.env.VITE_BACKEND_URL
+        const res = await axios.get(`${backendUrl}/api/chargers`, {
           headers: {
             Authorization: `Bearer ${token}`
           }

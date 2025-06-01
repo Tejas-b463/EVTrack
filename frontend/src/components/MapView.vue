@@ -32,7 +32,8 @@ export default {
     async loadChargers() {
       try {
         // Fetch charger data from your backend API
-        const res = await axios.get('http://localhost:5000/api/chargers', {
+        const backendUrl = import.meta.env.VITE_BACKEND_URL
+        const res = await axios.get(`${backendUrl}/api/chargers`, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`
           }

@@ -133,7 +133,8 @@ export default {
     async addStation() {
       try {
         const token = localStorage.getItem('token')
-        await axios.post('http://localhost:5000/api/chargers', {
+        const backendUrl = import.meta.env.VITE_BACKEND_URL
+        await axios.post(`${backendUrl}/api/chargers`, {
           name: this.form.name,
           location: {
             lat: parseFloat(this.form.lat),
