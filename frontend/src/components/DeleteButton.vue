@@ -1,5 +1,5 @@
 <template>
-  <button @click="deleteStation">Delete</button>
+  <button @click="deleteStation" class="cursor-pointer">Delete</button>
 </template>
 
 <script>
