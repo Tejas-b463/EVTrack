@@ -179,7 +179,8 @@ export default {
     async updateStation() {
       try {
         const token = localStorage.getItem('token')
-        await axios.put(`http://localhost:5000/api/chargers/${this.station._id}`, {
+         const backendUrl = import.meta.env.VITE_BACKEND_URL
+        await axios.put(`${backendUrl}/api/chargers/${this.station._id}`, {
           ...this.form,
           location: {
             lat: parseFloat(this.form.location.lat),
